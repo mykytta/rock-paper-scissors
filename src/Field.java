@@ -1,19 +1,20 @@
 import java.util.Scanner;
 
 public class Field {
-    private GameLogic gameLogic = new GameLogic();
-    private Scanner scanner = new Scanner(System.in);
+    private GameLogic gameLogic;
+    private Scanner scanner;
     static boolean playerWantsToPlay;
 
     Field() {
+        gameLogic = new GameLogic();
+        scanner = new Scanner(System.in);
+        playerWantsToPlay = true;
         start();
     }
 
     public void start() {
 
         System.out.println("Добро пожаловать в игру камень-ножницы-бумага");
-
-        playerWantsToPlay = true;
 
         while (playerWantsToPlay) {
             System.out.println("    Пожалуйста выберите предмет    \n" +

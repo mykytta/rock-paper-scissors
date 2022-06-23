@@ -3,10 +3,15 @@ import java.util.Scanner;
 
 public class GameLogic {
 
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
 
-    private Random random = new Random();
+    private Random random;
 
+
+    GameLogic() {
+        scanner = new Scanner(System.in);
+        random = new Random();
+    }
 
     public int randomComputerChoice() {
         int randomNumber = random.nextInt(3) + 1;
